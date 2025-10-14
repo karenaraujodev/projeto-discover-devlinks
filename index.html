@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +7,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
     <header id="profile">
         <img src="./imagens/avatar.png" alt="foto">
         <p>@maykbrito</p>
     </header>
-        <nav>
+    <div id="switch">
+        <button aria-label="Alternar tema claro/escuro"></button>
+        <span></span>
+    </div>
+    <nav>
         <a href="#" class="box">Inscreva-se no NLW</a>
         <a href="#" class="box">Baixe meu E-book</a>
         <a href="#" class="box">Veja meu portfólio</a>
         <a href="#" class="box">Conheça o Explore</a>
     </nav>
-    <footer>
-        <p>Feito com ❤️ pela <a href="#">Rocketseat</a></p>
-    </footer>
+    <div id="social-links">
+        <a href="https://github.com/maykbrito" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <ion-icon name="logo-github"></ion-icon>
+        </a>
+
+        <a href="https://instagram.com/maykbrito" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+
+        <a href="https://youtube.com/maykbrito" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+
+        <a href="https://linkedin.com/in/maykbrito" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+    </div>
+
+<footer>
+    <p>Feito com ❤️ pela <a href="#">Rocketseat</a></p>
+</footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
