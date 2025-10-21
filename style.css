@@ -1,60 +1,69 @@
 @charset "UTF-8";
+
+/* Media query para telas maiores */
 @media (min-width: 700px) {
-  #social-links {
+   #social-links {
     font-size: 32px;
-  }
+   }
 }
 
+/* Reset */
 * {
   box-sizing: border-box;
 }
 
-:root{
+/* Variáveis de tema */
+:root {
     --text-color: white;
     --bg-url: url(imagens/bg-mobile.jpg);
-    --stroke-color:rgba(255,255,255,0.5);
-    --surface-color:rgba(255,255,255,0.05);
-    --surface-color-hover:rgba(0, 0, 0, 0.02);
-    --highlight-color:rgba(255,255,255,0.2);
-    --switch-bg-url:url(imagens/moon-stars.svg);
+    --stroke-color: rgba(255,255,255,0.5);
+    --surface-color: rgba(255,255,255,0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(255,255,255,0.2);
+    --switch-bg-url: url(imagens/moon-stars.svg);
 }
-.light{
+
+.light {
     --text-color: black;
-    --stroke-color:rgba(0,0,0,0.5);
-    --surface-color:rgba(0,0,0,0.05);
-    --surface-color-hover:rgba(0, 0, 0, 0.2);
-    --highlight-color:rgba(0,0,0,0.1);
+    --stroke-color: rgba(0,0,0,0.5);
+    --surface-color: rgba(0,0,0,0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.2);
+    --highlight-color: rgba(0,0,0,0.1);
     --bg-url: url(imagens/bg-mobile-light.jpg);
-    --switch-bg-url:url(imagens/sun.svg);
+    --switch-bg-url: url(imagens/sun.svg);
 }
-body{
+
+/* Corpo da página */
+body {
     background: var(--bg-url) no-repeat top center/cover;
-    min-height: 100vh;    /* ocupa toda a altura da tela */
-    display: flex;             /* usa flexbox */
-    flex-direction: column;     /* organiza em coluna */
-    align-items: center;      /* centraliza horizontalmente */
-    justify-content: center;     /* centraliza verticalmente */
-    margin: 0;                   /* remove margens padrão */
-
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 
-body *{
+body * {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text-color);
     text-align: center;
 }
-#profile{
-    text-align: center;
-    margin-bottom: 32px;  
-}
 
+/* Perfil */
+#profile {
+    text-align: center;
+    margin-bottom: 32px;
+}
 
 #profile p {
     font-weight: 500;
     line-height: 24px;
     margin-top: 8px;
 }
-#switch{
+
+/* Switch de tema */
+#switch {
     position: relative;
     width: 64px;
 }
@@ -64,37 +73,39 @@ body *{
     border: 0;
     border-radius: 50%;
     background: white var(--switch-bg-url) no-repeat center;
-
     position: absolute;
     top: 50%;
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
+    transition: left 0.3s ease, right 0.3s ease, background 0.3s ease;
 }
 .light #switch button {
     right: 0;
     left: initial;
 }
+
 #switch span {
     display: block;
     width: 64px;
     height: 24px;
     background: var(--surface-color);
     border: 1px solid var(--stroke-color);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);        
     border-radius: 9999px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);         
 }
 
 
-nav{
+/* Navegação */
+nav {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
     padding: 16px;
 }
-.box{
+.box {
     display: inline-block;
     width: 200px;
     border: 1px solid var(--stroke-color);
@@ -105,18 +116,18 @@ nav{
     font-weight: 500;
     transition: background-color 0.3s ease;
 }
-.box:hover{
+.box:hover {
     background-color: var(--surface-color-hover);
 }
 
-#social-links{
+/* Links sociais */
+#social-links {
     display: flex;
     justify-content: center;
     padding: 24px 0;
     font-size: 24px;
 }
-
-#social-links a{
+#social-links a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,15 +135,16 @@ nav{
     transition: background 0.2s, transform 0.2s;
     border-radius: 50%;
 }
-#social-links a:hover{
+#social-links a:hover {
     background: var(--highlight-color);
     transform: scale(1.1);
 }
-footer{
+
+/* Rodapé */
+footer {
     padding: 24px 0;
     font-size: 14px;
 }
-
 footer a {
     color: var(--text-color);
     text-decoration: underline;
